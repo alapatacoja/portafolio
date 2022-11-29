@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Barcode;
+    src: url(/fonts/Paskowy.ttf);
+}
+
+@font-face {
+    font-family: TypeWritter;
+    src: url(/fonts/dogicapixel.ttf);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: red;
+}
+
+
+
+.fondo {
+    background: url('/imgs/fondo.gif') no-repeat center center fixed;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: calc(100%+50px);
+
+}
+
+.capa {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: greenyellow;
+}
+
+.logo {
+    font-family: Barcode;
+    font-size: 4em;
+    float: right;
+    margin: 1em;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 44%, rgba(0, 0, 0, 0.394919168591224) 75%, rgba(0, 0, 0, 0) 100%);
+    height: 100%;
+    width: 35em
+}
+
+.h-element {
+    font-family: TypeWritter;
+    line-height: 5em;
+    margin-left: 3.9em;
+    letter-spacing: .3em;
+}
+
+#arr,
+#abj,
+#izq,
+#der {
+    background: greenyellow;
+    position: fixed;
+}
+
+#izq,
+#der {
+    top: 0;
+    bottom: 0;
+    width: 15px;
+}
+
+#izq {
+    left: 0;
+}
+
+#der {
+    right: 0;
+}
+
+#arr,
+#abj {
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+#arr {
+    top: 0;
+}
+
+#abj {
+    bottom: 0;
+}
