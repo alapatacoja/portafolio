@@ -7,15 +7,26 @@
     font-family: TypeWritter;
     src: url(/fonts/dogicapixel.ttf);
 }
+@font-face {
+    font-family: sub;
+    src: url(/fonts/Bohemian\ Typewriter.ttf);
+}
+
+@font-face {
+    font-family: icon;
+    src: url(/fonts/PixelCharas.ttf);
+}
 
 html,
 body {
     height: 100%;
     margin: 0;
-    background-color: red;
 }
 
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 .fondo {
     background: url('/imgs/fondo.gif') no-repeat center center fixed;
@@ -36,14 +47,23 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    color: greenyellow;
 }
 
 .logo {
-    font-family: Barcode;
-    font-size: 4em;
+    font-family: TypeWritter;
+    font-size: 1.7em;
     float: right;
     margin: 1em;
+    margin-bottom: 4em;
+    color: #adff2f;
+    display: -webkit-box;
+}
+
+
+.icon{
+    font-size: 3em;
+    font-family: icon;
+    margin-top: 5em;
 }
 
 .main {
@@ -53,14 +73,17 @@ body {
     height: 100%;
 }
 
-.sub{
-    font-family: TypeWritter;
-    line-height: 5em;
-    
-    letter-spacing: .3em;
-    cursor: pointer;
-    margin: 0  3.9em;
+.text{
+    margin-top: 1.001em;
+    margin-left: 1.2em;
 }
+
+.sub{
+    font-size: small;
+    color: greenyellow;
+    margin-top: 1em;
+    margin-bottom: 5em;
+    }
 
 .header {
     display: flex;
@@ -69,13 +92,14 @@ body {
     background: rgb(0, 0, 0);
     background: linear-gradient(90deg, black 65%, rgba(0, 0, 0, 0.396) 80%, rgba(0, 0, 0, 0) 100%);
     height: 100%;
-    width: 40em
+    width: 40em;
+    z-index: 0;
 }
 
 .h-element {
     font-family: TypeWritter;
     line-height: 5em;
-    
+    color: white;
     letter-spacing: .3em;
     cursor: pointer;
     margin: 2rem  3.9em;
@@ -128,66 +152,80 @@ body {
 
 @keyframes glitch {
     0% {
-        text-shadow: 1px 0 0 red, -1px 0 0 blue;
+        text-shadow: 1px 0 0 rgb(37, 200, 255), -1px 0 0 red;
     }
 
     10% {
-        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
     }
 
     20% {
-        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
+        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 yellow;
     }
 
     24% {
-        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
     }
 
     25% {
-        text-shadow: 70px 0 0 red, -70px 0 0 blue;
+        text-shadow: 70px 0 0 rgb(37, 200, 255), -70px 0 0 red;
     }
 
     26% {
-        text-shadow: 0 0 0 red, 0 0 0 blue;
+        text-shadow: 0 0 0 rgb(37, 200, 255), 0 0 0 red;
     }
 
     30% {
-        text-shadow: 1px 0 0 blue, -1px 0 0 yellow;
+        text-shadow: 1px 0 0 red, -1px 0 0 yellow;
     }
 
     40% {
-        text-shadow: -1px 0 0 blue, 1px 0 0 yellow;
+        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
     }
 
     50% {
-        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
+        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 yellow;
     }
 
     60% {
-        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
     }
 
     70% {
-        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
     }
 
     80% {
-        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
     }
 
     89% {
-        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
+        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 yellow;
     }
 
     90% {
-        text-shadow: 60px 0 0 yellow, -60px 0 0 blue;
+        text-shadow: 60px 0 0 yellow, -60px 0 0 red;
     }
 
     91% {
-        text-shadow: 0 0 0 yellow, 0 0 0 blue;
+        text-shadow: 0 0 0 yellow, 0 0 0 red;
     }
 
     100% {
-        text-shadow: -1px 0 0 blue, 1px 0 0 yellow;
+        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
     }
+}
+
+.desc {
+    color: white;
+    font-family: TypeWritter;
+    line-height: 2em;
+    font-size: medium;
+    bottom: 0;
+    right: 0;
+    margin: 3em;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
 }

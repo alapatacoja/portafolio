@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Index</title>
 </head>
 
 <body>
@@ -15,26 +15,65 @@
         <div class="capa">
             <div class="main">
                 <div class="header">
-                    <div class="logo">alapatacoja</div>
-<!--                     <div class="sub">Web Developer</div> -->
-                    <div class="h-element">about me</div>
+                    <div class="logo">
+                        <span class="icon" id="dino">x</span>
+                        <div class="text">
+                            <span class="nombre">alapatacoja</span>
+                            <div class="sub">Web Developer</div>
+                        </div>
+
+                    </div>
+
+                    <div class="h-element"> <a href="aboutme.html"> about me</a></div>
                     <div class="h-element">projects</div>
                     <div class="h-element">contact</div>
 
                 </div>
                 <div class="content">
                     <div class="desc">
-                        <p></p>
+                        <span>Alexandra Zapata</span>
+                        <span>19 años</span>
+                        <span>Desarrolladora Web</span>
                     </div>
+                    <p></p>
                 </div>
             </div>
-
         </div>
+
+    </div>
     </div>
     <div id="izq"></div>
     <div id="der"></div>
     <div id="arr"></div>
     <div id="abj"></div>
+    <audio src="imgs/Mario Kart Wii Music - Star Theme.mp3" id="audio"></audio>
+    <script>
+        var audio = document.getElementById("audio");
+        var dino = document.getElementById("dino");
+        var dentro = false;
+        var aux = 0;
+
+        var uwu = setInterval(function () {
+            if (dentro) {
+                    aux += 20;                
+            }
+                    dino.style.filter = "hue-rotate(" + aux + "deg)";
+                }, 20);
+
+        dino.addEventListener('mouseover', (e) =>{
+            dentro = true;
+            dino.innerHTML = "s";
+            console.log('toy')
+        });
+
+        dino.addEventListener('mouseout', (e) => {
+          dentro = false;
+          aux = 0;
+          dino.innerHTML = "x";
+          dino.style.color = "#adff2f"
+        });
+
+    </script>
 </body>
 
 </html>
