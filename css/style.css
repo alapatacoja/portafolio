@@ -53,21 +53,32 @@ body {
     height: 100%;
 }
 
+.sub{
+    font-family: TypeWritter;
+    line-height: 5em;
+    
+    letter-spacing: .3em;
+    cursor: pointer;
+    margin: 0  3.9em;
+}
+
 .header {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgb(0, 0, 0) 44%, rgba(0, 0, 0, 0.394919168591224) 75%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, black 65%, rgba(0, 0, 0, 0.396) 80%, rgba(0, 0, 0, 0) 100%);
     height: 100%;
-    width: 35em
+    width: 40em
 }
 
 .h-element {
     font-family: TypeWritter;
     line-height: 5em;
-    margin-left: 3.9em;
+    
     letter-spacing: .3em;
+    cursor: pointer;
+    margin: 2rem  3.9em;
 }
 
 #arr,
@@ -82,7 +93,7 @@ body {
 #der {
     top: 0;
     bottom: 0;
-    width: 15px;
+    width: 5px;
 }
 
 #izq {
@@ -97,7 +108,7 @@ body {
 #abj {
     left: 0;
     right: 0;
-    height: 15px;
+    height: 5px;
 }
 
 #arr {
@@ -106,4 +117,77 @@ body {
 
 #abj {
     bottom: 0;
+}
+
+.h-element:hover {
+    animation: glitch 2s  infinite;
+    transform: scale(1.1);
+    margin-left: 5em;
+    transition: .2s;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 1px 0 0 red, -1px 0 0 blue;
+    }
+
+    10% {
+        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+    }
+
+    20% {
+        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
+    }
+
+    24% {
+        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+    }
+
+    25% {
+        text-shadow: 70px 0 0 red, -70px 0 0 blue;
+    }
+
+    26% {
+        text-shadow: 0 0 0 red, 0 0 0 blue;
+    }
+
+    30% {
+        text-shadow: 1px 0 0 blue, -1px 0 0 yellow;
+    }
+
+    40% {
+        text-shadow: -1px 0 0 blue, 1px 0 0 yellow;
+    }
+
+    50% {
+        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
+    }
+
+    60% {
+        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+    }
+
+    70% {
+        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+    }
+
+    80% {
+        text-shadow: -1px 0 0 red, 1px 0 0 blue;
+    }
+
+    89% {
+        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
+    }
+
+    90% {
+        text-shadow: 60px 0 0 yellow, -60px 0 0 blue;
+    }
+
+    91% {
+        text-shadow: 0 0 0 yellow, 0 0 0 blue;
+    }
+
+    100% {
+        text-shadow: -1px 0 0 blue, 1px 0 0 yellow;
+    }
 }
