@@ -58,18 +58,20 @@
                     aux += 20;                
             }
                     dino.style.filter = "hue-rotate(" + aux + "deg)";
-                }, 20);
+                }, 25);
 
         dino.addEventListener('mouseover', (e) =>{
             dentro = true;
-            dino.innerHTML = "s";
-            console.log('toy')
+            console.log('toy');
+            audio.currentTime = 0;
+            audio.play();
+            
         });
 
         dino.addEventListener('mouseout', (e) => {
           dentro = false;
           aux = 0;
-          dino.innerHTML = "x";
+          audio.pause();
           dino.style.color = "#adff2f"
         });
 
