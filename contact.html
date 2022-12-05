@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>About Me</title>
+    <title>Contact</title>
 </head>
 
 <body>
@@ -23,19 +23,17 @@
                         </div>
 
                     </div>
-
                     <a href="Index.html">
                         <div class="h-element">Index</div>
                     </a>
-
-                        <div class="off"> about me</div>
-
+                    <a href="abotme.html">
+                        <div class="h-element"> about me</div>
+                    </a>
                     <a href="projects.html">
                         <div class=" h-element">projects</div>
                     </a>
-                    <a href="contact.html">
-                        <div class="h-element">contact</div>
-                    </a>
+
+                        <div class="off">contact</div>
 
                 </div>
                 <div class="content">
@@ -64,24 +62,24 @@
 
         var uwu = setInterval(function () {
             if (dentro) {
-                    aux += 20;                
+                aux += 20;
             }
-                    dino.style.filter = "hue-rotate(" + aux + "deg)";
-                }, 25);
+            dino.style.filter = "hue-rotate(" + aux + "deg)";
+        }, 25);
 
-        dino.addEventListener('mouseover', (e) =>{
+        dino.addEventListener('mouseover', (e) => {
             dentro = true;
             console.log('toy');
             audio.currentTime = 0;
             audio.play();
-            
+
         });
 
         dino.addEventListener('mouseout', (e) => {
-          dentro = false;
-          aux = 0;
-          audio.pause();
-          dino.style.color = "#adff2f"
+            dentro = false;
+            aux = 0;
+            audio.pause();
+            dino.style.color = "#adff2f"
         });
 
     </script>

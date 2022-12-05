@@ -54,7 +54,7 @@ a{
     font-size: 1.7em;
     float: right;
     margin: 1em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     color: #adff2f;
     display: -webkit-box;
 }
@@ -104,6 +104,15 @@ a{
     cursor: pointer;
     margin: 2rem  3.9em;
 }
+
+.off{
+    font-family: TypeWritter;
+    line-height: 5em;
+    letter-spacing: .3em;
+    margin: 2rem  3.9em;
+    color: rgb(87, 87, 87);
+}
+
 
 #arr,
 #abj,
