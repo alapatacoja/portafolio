@@ -102,7 +102,9 @@ a{
     color: white;
     letter-spacing: .3em;
     cursor: pointer;
-    margin: 2rem  3.9em;
+    margin: 2rem  3em;
+    width: fit-content;
+    padding: 0;
 }
 
 .off{
@@ -111,6 +113,7 @@ a{
     letter-spacing: .3em;
     margin: 2rem  3.9em;
     color: rgb(87, 87, 87);
+    text-decoration:line-through
 }
 
 
@@ -228,7 +231,7 @@ a{
 .desc {
     color: white;
     font-family: TypeWritter;
-    line-height: 2em;
+    line-height: 3em;
     font-size: medium;
     bottom: 0;
     right: 0;
@@ -237,4 +240,13 @@ a{
     display: flex;
     flex-direction: column;
     position: absolute;
+}
+
+.h-element > i, .off>i{    
+    margin-right: 10px;
+    visibility: hidden;
+}
+
+.h-element:hover >  i{
+    visibility: visible;
 }

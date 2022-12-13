@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://kit.fontawesome.com/71a9f6baad.js" crossorigin="anonymous"></script>
     <title>Contact</title>
 </head>
 
@@ -24,23 +26,24 @@
 
                     </div>
                     <a href="Index.html">
-                        <div class="h-element">Index</div>
+                        <div class="h-element"><i class="fa-solid fa-play" class="flecha"></i>home</div>
                     </a>
                     <a href="abotme.html">
-                        <div class="h-element"> about me</div>
+                        <div class="h-element"> <i class="fa-solid fa-play" class="flecha"></i>about me</div>
                     </a>
                     <a href="projects.html">
-                        <div class=" h-element">projects</div>
+                        <div class=" h-element"><i class="fa-solid fa-play" class="flecha"></i>projects</div>
                     </a>
 
-                        <div class="off">contact</div>
+                    <div class="off"><i class="fa-solid fa-play" class="flecha"></i>contact</div>
 
                 </div>
                 <div class="content">
                     <div class="desc">
-                        <span>Alexandra Zapata</span>
-                        <span>19 años</span>
-                        <span>Desarrolladora Web</span>
+                        <a href="https://www.instagram.com/alapatacoja/" class="link" id="ig"><span >alapatacoja <i class="fa-brands fa-instagram"></i></span></a>
+                        <a href="https://github.com/alapatacoja" class="link" id="git"><span >alapatacoja <i class="fa-brands fa-github" id="git"></i></span></a>
+                        <a href="https://twitter.com/alapatacoja_" class="link" id="tw"><span >alapatacoja_ <i class="fa-brands fa-twitter" id="tw"></i></span></a>
+                        <a href="mailto:alezaprin@alu.edu.gva.es" class="link" id="mail"><span >alezaprin@alu.edu.gva.es <i class="fa-regular fa-envelope" id="mail"></i></span></a>
                     </div>
                     <p></p>
                 </div>
@@ -54,35 +57,7 @@
     <div id="arr"></div>
     <div id="abj"></div>
     <audio src="imgs/Mario Kart Wii Music - Star Theme.mp3" id="audio"></audio>
-    <script>
-        var audio = document.getElementById("audio");
-        var dino = document.getElementById("dino");
-        var dentro = false;
-        var aux = 0;
-
-        var uwu = setInterval(function () {
-            if (dentro) {
-                aux += 20;
-            }
-            dino.style.filter = "hue-rotate(" + aux + "deg)";
-        }, 25);
-
-        dino.addEventListener('mouseover', (e) => {
-            dentro = true;
-            console.log('toy');
-            audio.currentTime = 0;
-            audio.play();
-
-        });
-
-        dino.addEventListener('mouseout', (e) => {
-            dentro = false;
-            aux = 0;
-            audio.pause();
-            dino.style.color = "#adff2f"
-        });
-
-    </script>
+    <script src="js/general.js"></script>
 </body>
 
 </html>
