@@ -24,3 +24,17 @@ dino.addEventListener('mouseout', (e) => {
     audio.pause();
     dino.style.color = "#adff2f"
 });
+
+var header = document.getElementById("header");
+
+function unload(name){
+    header.style.animationName = 'unload';
+    setTimeout(function(){
+        location.replace(name+'.html');
+    }, 1000);
+   
+}
+window.addEventListener('load', function (e){
+    header.style.animationName = 'loadbg';
+});
+

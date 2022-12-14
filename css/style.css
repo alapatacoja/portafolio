@@ -7,6 +7,7 @@
     font-family: TypeWritter;
     src: url(/fonts/dogicapixel.ttf);
 }
+
 @font-face {
     font-family: sub;
     src: url(/fonts/Bohemian\ Typewriter.ttf);
@@ -21,9 +22,9 @@ html,
 body {
     height: 100%;
     margin: 0;
+    
 }
-
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -51,19 +52,19 @@ a{
 
 .logo {
     font-family: TypeWritter;
-    font-size: 1.7em;
+    font-size: 1.2em;
     float: right;
     margin: 1em;
-    margin-bottom: 2em;
     color: #adff2f;
     display: -webkit-box;
 }
 
 
-.icon{
+.icon {
     font-size: 3em;
     font-family: icon;
     margin-top: 5em;
+    cursor: default;
 }
 
 .main {
@@ -73,47 +74,48 @@ a{
     height: 100%;
 }
 
-.text{
+.text {
     margin-top: 1.001em;
     margin-left: 1.2em;
 }
 
-.sub{
+.sub {
     font-size: small;
     color: greenyellow;
     margin-top: 1em;
     margin-bottom: 5em;
-    }
+}
 
 .header {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, black 65%, rgba(0, 0, 0, 0.396) 80%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.718) 50%, rgba(0, 0, 0, 0.396) 80%, rgba(0, 0, 0, 0) 100%);
     height: 100%;
     width: 40em;
-    z-index: 0;
+    position: fixed;
 }
 
 .h-element {
     font-family: TypeWritter;
-    line-height: 5em;
+    font-size: .9em;
+    line-height: 2em;
     color: white;
     letter-spacing: .3em;
-    cursor: pointer;
-    margin: 2rem  3em;
+    margin: 2rem 3em;
     width: fit-content;
-    padding: 0;
 }
 
-.off{
+.off {
+    font-size: .9em;
     font-family: TypeWritter;
-    line-height: 5em;
+    line-height: 2em;
     letter-spacing: .3em;
-    margin: 2rem  3.9em;
+    margin: 2rem 3.9em;
     color: rgb(87, 87, 87);
-    text-decoration:line-through
+    text-decoration: line-through;
+    cursor: default;
 }
 
 
@@ -156,7 +158,7 @@ a{
 }
 
 .h-element:hover {
-    animation: glitch 2s  infinite;
+    animation: glitch 2s infinite;
     transform: scale(1.1);
     margin-left: 5em;
     transition: .2s;
@@ -164,27 +166,27 @@ a{
 
 @keyframes glitch {
     0% {
-        text-shadow: 1px 0 0 rgb(37, 200, 255), -1px 0 0 red;
+        text-shadow: 1px 0 0 #00bfff, -1px 0 0 red;
     }
 
     10% {
-        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
+        text-shadow: -1px 0 0 #25c8ff, 1px 0 0 red;
     }
 
     20% {
-        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 yellow;
+        text-shadow: -1px 0 0 #25c8ff, 1px 0 0 yellow;
     }
 
     24% {
-        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
+        text-shadow: -1px 0 0 #25c8ff, 1px 0 0 red;
     }
 
     25% {
-        text-shadow: 70px 0 0 rgb(37, 200, 255), -70px 0 0 red;
+        text-shadow: 70px 0 0 #25c8ff, -70px 0 0 red;
     }
 
     26% {
-        text-shadow: 0 0 0 rgb(37, 200, 255), 0 0 0 red;
+        text-shadow: 0 0 0 #25c8ff, 0 0 0 red;
     }
 
     30% {
@@ -242,11 +244,43 @@ a{
     position: absolute;
 }
 
-.h-element > i, .off>i{    
+.h-element>a>i,
+.off>i {
     margin-right: 10px;
     visibility: hidden;
 }
 
-.h-element:hover >  i{
+.h-element:hover>a>i {
     visibility: visible;
+}
+
+
+.header{
+    animation-name: loadbg;
+    animation-duration: 1.5s;
+    z-index: 9;
+}
+
+@keyframes loadbg {
+    0% {
+        width: 150%;
+        background-color: black;
+    }
+
+
+    100% {
+        width: 40em;
+
+    }
+}
+
+@keyframes unload {
+    0%{
+        width: 40em;
+    }
+
+    100%{
+        width: 150%;
+        background-color: black;
+    }
 }

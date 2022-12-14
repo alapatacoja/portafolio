@@ -1,0 +1,61 @@
+.loading {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: .2s;
+    animation-name: loadbg;
+    animation-duration: 1.5s;
+    visibility: hidden;
+}
+
+#dino2 {
+    animation-name: load;
+    animation-duration: 1.5s;
+    font-size: 20em;
+    margin: auto;
+    visibility: hidden;
+}
+
+
+@keyframes loadbg {
+    0% {
+        background-color: black;
+        visibility: visible;
+    }
+
+    50% {
+        background-color: black;
+        visibility: visible;
+    }
+
+    100% {
+        background-color: transparent;
+        visibility: hidden;
+    }
+}
+
+@keyframes load {
+    0% {
+        font-size: 0em;
+        color: greenyellow;
+        visibility: visible;
+
+    }
+
+    50% {
+        font-size: 20em;
+        visibility: visible;
+        color: greenyellow;
+        
+    }
+
+    80% {
+        font-size: 20em;
+        visibility: hidden;
+    }
+}
