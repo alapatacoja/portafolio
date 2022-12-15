@@ -57,6 +57,7 @@ a {
     margin: 1em;
     color: #adff2f;
     display: -webkit-box;
+    margin-bottom: 1.2em;
 }
 
 
@@ -83,13 +84,13 @@ a {
     font-size: small;
     color: greenyellow;
     margin-top: 1em;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 .header {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1em;
     background: rgb(0, 0, 0);
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.718) 50%, rgba(0, 0, 0, 0.396) 80%, rgba(0, 0, 0, 0) 100%);
     height: 100%;
@@ -103,8 +104,7 @@ a {
     line-height: 2em;
     color: white;
     letter-spacing: .3em;
-    margin: 2rem 3em;
-    width: fit-content;
+    margin-left: 3em;
 }
 
 .off {
@@ -112,10 +112,10 @@ a {
     font-family: TypeWritter;
     line-height: 2em;
     letter-spacing: .3em;
-    margin: 2rem 3.9em;
     color: rgb(87, 87, 87);
     text-decoration: line-through;
     cursor: default;
+    margin-left: 2em;
 }
 
 
@@ -157,10 +157,10 @@ a {
     bottom: 0;
 }
 
-.h-element:hover {
+.h-element>a:hover {
     animation: glitch 2s infinite;
     transform: scale(1.1);
-    margin-left: 5em;
+    margin-left: 2em;
     transition: .2s;
 }
 
@@ -283,4 +283,10 @@ a {
         width: 150%;
         background-color: black;
     }
+}
+
+.elements{
+    height: 70%;
+    margin-top: auto;
+    display: grid;
 }
