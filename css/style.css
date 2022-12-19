@@ -22,8 +22,9 @@ html,
 body {
     height: 100%;
     margin: 0;
-    
+
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -42,7 +43,7 @@ a {
 }
 
 .capa {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
     left: 0;
@@ -52,7 +53,6 @@ a {
 
 .logo {
     font-family: TypeWritter;
-    font-size: 1.2em;
     float: right;
     margin: 1em;
     color: #adff2f;
@@ -92,30 +92,40 @@ a {
     flex-direction: column;
     padding: 1em;
     background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.718) 50%, rgba(0, 0, 0, 0.396) 80%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.88) 50%,  rgba(0, 0, 0, 0) 100%);
+    /*      background-color: aqua; 
+     opacity: .5;  */
     height: 100%;
-    width: 40em;
+    width: 35%;
     position: fixed;
+    flex: 1;
+    width: fit-content;
 }
 
 .h-element {
     font-family: TypeWritter;
-    font-size: .9em;
+    font-size: .8em;
     line-height: 2em;
     color: white;
-    letter-spacing: .3em;
+    letter-spacing: .2em;
     margin-left: 3em;
+    width: fit-content;
+}
+
+.h-element a {
+    padding: 20px 0;
 }
 
 .off {
-    font-size: .9em;
+    font-size: .8em;
     font-family: TypeWritter;
     line-height: 2em;
-    letter-spacing: .3em;
+    letter-spacing: .2em;
     color: rgb(87, 87, 87);
     text-decoration: line-through;
     cursor: default;
     margin-left: 2em;
+    width: fit-content;
 }
 
 
@@ -166,67 +176,67 @@ a {
 
 @keyframes glitch {
     0% {
-        text-shadow: 1px 0 0 #00bfff, -1px 0 0 red;
+        text-shadow: 2px 0 0 rgb(14, 81, 250), -2px 0 0 red;
     }
 
     10% {
-        text-shadow: -1px 0 0 #25c8ff, 1px 0 0 red;
+        text-shadow: -2px 0 0 rgb(14, 81, 250), 2px 0 0 red;
     }
 
     20% {
-        text-shadow: -1px 0 0 #25c8ff, 1px 0 0 yellow;
+        text-shadow: -2px 0 0 rgb(14, 81, 250), 2px 0 0 green;
     }
 
     24% {
-        text-shadow: -1px 0 0 #25c8ff, 1px 0 0 red;
+        text-shadow: -2px 0 0 rgb(14, 81, 250), 2px 0 0 red;
     }
 
     25% {
-        text-shadow: 70px 0 0 #25c8ff, -70px 0 0 red;
+        text-shadow: 70px 0 0 rgb(14, 81, 250), -70px 0 0 red;
     }
 
     26% {
-        text-shadow: 0 0 0 #25c8ff, 0 0 0 red;
+        text-shadow: 0 0 0 rgb(14, 81, 250), 0 0 0 red;
     }
 
     30% {
-        text-shadow: 1px 0 0 red, -1px 0 0 yellow;
+        text-shadow: 2px 0 0 red, -2px 0 0 green;
     }
 
     40% {
-        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
+        text-shadow: -2px 0 0 red, 2px 0 0 green;
     }
 
     50% {
-        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 yellow;
+        text-shadow: -2px 0 0 rgb(14, 81, 250), 2px 0 0 green;
     }
 
     60% {
-        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
+        text-shadow: -2px 0 0 rgb(14, 81, 250), 2px 0 0 red;
     }
 
     70% {
-        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
+        text-shadow: -2px 0 0 rgb(14, 81, 250), 2px 0 0 red;
     }
 
     80% {
-        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 red;
+        text-shadow: -2px 0 0 rgb(14, 81, 250), 2px 0 0 red;
     }
 
     89% {
-        text-shadow: -1px 0 0 rgb(37, 200, 255), 1px 0 0 yellow;
+        text-shadow: -2px 0 0 rgb(14, 81, 250), 2px 0 0 green;
     }
 
     90% {
-        text-shadow: 60px 0 0 yellow, -60px 0 0 red;
+        text-shadow: 60px 0 0 green, -60px 0 0 red;
     }
 
     91% {
-        text-shadow: 0 0 0 yellow, 0 0 0 red;
+        text-shadow: 0 0 0 green, 0 0 0 red;
     }
 
     100% {
-        text-shadow: -1px 0 0 red, 1px 0 0 yellow;
+        text-shadow: -1px 0 0 red, 1px 0 0 green;
     }
 }
 
@@ -255,9 +265,9 @@ a {
 }
 
 
-.header{
+.header {
     animation-name: loadbg;
-    animation-duration: 1.5s;
+    animation-duration: .5s;
     z-index: 9;
 }
 
@@ -269,24 +279,44 @@ a {
 
 
     100% {
-        width: 40em;
+        width: 35%;
 
     }
 }
 
 @keyframes unload {
-    0%{
-        width: 40em;
+    0% {
+        width: 35%;
     }
 
-    100%{
+    100% {
         width: 150%;
         background-color: black;
     }
 }
 
-.elements{
+.elements {
     height: 70%;
     margin-top: auto;
     display: grid;
 }
+
+
+
+.content {
+    color: white;
+    align-items: center;
+}
+
+.uwu {
+    width: 90%;
+    font-family: TypeWritter;
+/*     background-color: blueviolet; */
+    height: 100%;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
